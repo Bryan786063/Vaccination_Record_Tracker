@@ -1,0 +1,31 @@
+@extends('layouts.app')
+
+@section('content')
+<div class="container">
+    <h1>Create Health Worker</h1>
+    <form action="{{ route('health_workers.store') }}" method="POST">
+        @csrf
+        <div class="mb-3">
+            <label for="first_name" class="form-label">First Name</label>
+            <input type="text" class="form-control" id="first_name" name="first_name" required>
+        </div>
+        <div class="mb-3">
+            <label for="last_name" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="last_name" name="last_name" required>
+        </div>
+        <div class="mb-3">
+            <label for="license_no" class="form-label">License No</label>
+            <input type="text" class="form-control" id="license_no" name="license_no">
+        </div>
+        <div class="mb-3">
+            <label for="contact" class="form-label">Contact</label>
+            <input type="text" class="form-control" id="contact" name="contact">
+        </div>
+        <div class="mb-3">
+            <label for="role" class="form-label">Role</label>
+            <input type="text" class="form-control" id="role" name="role">
+        </div>
+        <button type="submit" class="btn btn-primary">Create</button>
+    </form>
+</div>
+@endsection
