@@ -6,7 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Patient extends Model
 {
+    protected $table = 'patients';
     protected $primaryKey = 'patient_id';
+    public $incrementing = true;
+    protected $keyType = 'int';
 
     protected $fillable = [
         'name',

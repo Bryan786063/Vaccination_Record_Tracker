@@ -4,6 +4,10 @@
 <div class="container">
     <h1>Patients</h1>
     <a href="{{ route('patients.create') }}" class="btn btn-primary">Create Patient</a>
+    <div class="my-3">
+        <label for="totalPatients" class="form-label">Total Patients</label>
+        <input id="totalPatients" type="text" class="form-control w-auto" value="{{ $totalPatients ?? 0 }}" readonly>
+    </div>
     <table class="table">
         <thead>
             <tr>
